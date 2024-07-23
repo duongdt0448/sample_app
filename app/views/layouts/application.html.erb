@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsTutorial</title>
+    <title><%= full_title yield :title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Sample app", "#", id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to t("layouts.header.nav.home"), Settings.links.home %></li>
+            <li><%= link_to t("layouts.header.nav.help"), Settings.links.help %></li>
+            <li><%= link_to t("layouts.header.nav.login"),Settings.links.login %></li>
+            <%= link_to "En", locale: :en %>
+            <%= link_to "Vi", locale: :vi %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
