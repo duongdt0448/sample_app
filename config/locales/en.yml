@@ -23,3 +23,12 @@ en:
         help: "Rails Tutorial help page"
         book: "%{rails_book_em} book"
         rails_book_em: "Ruby on Rails Tutorial"
+  users:
+    new:
+      title: "Sign up"
+      form:
+        confirm: "Confirmation"
+        submit_button: "Create my account"
+    message:
+      new: "User created successfully"
+      not_found: "User not found!"
