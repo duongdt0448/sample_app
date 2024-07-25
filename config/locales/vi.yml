@@ -1,4 +1,18 @@
 vi:
+  activerecord:
+    models:
+      user: "Người dùng"
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật Khẩu"
+    errors:
+      messages:
+        blank: "Không để trống"
+        invalid: "Không hợp lệ"
+      error: "Lỗi"
+      the_form_contains: "Form có"
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
@@ -23,3 +37,12 @@ vi:
         help: "Rails Tutorial help page"
         book: "%{rails_book_em} sách"
         rails_book_em: "Ruby on Rails Tutorial"
+  users:
+    new:
+      title: "Đăng ký"
+      form:
+        confirm: "Xác nhận"
+        submit_button: "Tạo tài khoản mới"
+    message:
+      new: "Người dùng được tạo thành công"
+      not_found: "Không tìm thấy người dùng!"
