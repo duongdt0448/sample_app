@@ -5,9 +5,22 @@ en:
     header:
       logo: "Sample app"
       nav:
-        home: "Home"
+        account: "Account"
         help: "Help"
+        home: "Home"
         login: "Log in"
+        log_out: "Log out"
+        profile: "Profile"
+        settings: "Settings"
+        users: "Users"
+  sessions:
+    new:
+      title: "Log in"
+      form:
+        submit_button: "Log in"
+    create:
+      message:
+        invalid_email_password: "Invalid email password combination"
   static_pages:
     home:
       title: "Home"
