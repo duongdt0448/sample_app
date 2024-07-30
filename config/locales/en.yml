@@ -21,6 +21,7 @@ en:
     create:
       message:
         invalid_email_password: "Invalid email password combination"
+        no_user: "No account found with the provided email address"
   static_pages:
     home:
       title: "Home"
@@ -37,11 +38,27 @@ en:
         book: "%{rails_book_em} book"
         rails_book_em: "Ruby on Rails Tutorial"
   users:
+    message:
+      auth:
+        edit: "You cannot edit this user."
+        delete: "You cannot delete this user."
+      delete_fail: "Delete fail!"
+      deleted: "User deleted"
+      please_log_in: "Please log in."
+      new: "User created successfully."
+      not_found: "User not found!"
+      updated: "Profile updated"
+    edit:
+      title: "Edit user"
+      change: "Change"
+      header: "Update your profile"
+      submit_button: "Save changes"
     new:
       title: "Sign up"
-      form:
-        confirm: "Confirmation"
-        submit_button: "Create my account"
-    message:
-      new: "User created successfully"
-      not_found: "User not found!"
+      submit_button: "Create my account"
+    form:
+      confirm: "Confirmation"
+    index:
+      title: "All users"
+    user:
+      you_sure?: "You sure?"

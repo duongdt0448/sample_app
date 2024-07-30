@@ -38,7 +38,8 @@ vi:
       title: "Đăng nhập"
     create:
       message:
-        invalid_email_password : "Email hoặc mật khẩu không hợp lệ"
+        invalid_email_password_combination: "Email hoặc mật khẩu không hợp lệ"
+        no_user: "Không tìm thấy tài khoản với địa chỉ email này"
   static_pages:
     home:
       title: "Trang chủ"
@@ -55,11 +56,27 @@ vi:
         book: "%{rails_book_em} sách"
         rails_book_em: "Ruby on Rails Tutorial"
   users:
-    new:
-      title: "Đăng ký"
-      form:
-        confirm: "Xác nhận"
-        submit_button: "Tạo tài khoản mới"
     message:
+      auth:
+        edit: "Bạn không thể chỉnh sửa người dùng này."
+        delete: "Bạn không thể xóa người dùng này."
+      delete_fail: "Xóa thất bại!"
+      deleted: "Người dùng đã bị xóa"
+      please_log_in: "Vui lòng đăng nhập."
       new: "Người dùng được tạo thành công"
       not_found: "Không tìm thấy người dùng!"
+      updated: "Hồ sơ đã được cập nhật"
+    edit:
+      title: "Chỉnh sửa"
+      change: "Thay dổi"
+      header: "Cập nhật hồ sơ"
+      submit_button: "Lưu thay đổi"
+    new:
+      title: "Đăng ký"
+      submit_button: "Tạo tài khoản mới"
+    form:
+      confirm: "Xác nhận"
+    index:
+      title: "Danh sách người dùng"
+    user:
+      you_sure?: "Bạn có chắc chắn không?"

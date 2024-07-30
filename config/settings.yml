@@ -12,3 +12,8 @@ user:
   email:
     max_length: 255
     regex_valid: \A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z
+page: 10
+gravatar:
+  md: 80
+  size: 50
+  link: "http://gravatar.com/emails"
