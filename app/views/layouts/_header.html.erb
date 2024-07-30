@@ -22,6 +22,8 @@
         <% else %>
           <li><%= link_to t(".nav.log_in"), login_path %></li>
         <% end %>
+        <%= link_to "En", locale: :en %>
+        <%= link_to "Vi", locale: :vi %>
       </ul>
     </nav>
   </div>
