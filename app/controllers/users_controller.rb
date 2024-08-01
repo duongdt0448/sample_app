@@ -5,10 +5,12 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @pagy, @users = pagy User.all, items: Settings.page
+    @pagy, @users = pagy User.all, limit: Settings.page
   end
 
-  def show; end
+  def show
+    @page, @microposts = pagy @user.microposts, limit: Settings.page
+  end
 
   def new
     @user = User.new

@@ -18,3 +18,10 @@ gravatar:
   size: 50
   link: "http://gravatar.com/emails"
 password_reset_expire: 2
+digit_140: 140
+micropost:
+  image:
+    width: 500
+    height: 500
+  image_max_size: "5.megabytes"
+  image_megabytes: 5 

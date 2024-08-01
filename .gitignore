@@ -34,3 +34,4 @@
 /test/*
 
 /config/application.yml
+/storage
