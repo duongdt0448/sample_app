@@ -17,6 +17,18 @@ en:
         profile: "Profile"
         settings: "Settings"
         users: "Users"
+  microposts:
+    message:
+      created: "Micropost created"
+      deleted: "Micropost deleted"
+      delete_failed: "Micropost deletion failed"
+      invalid: "Invalid micropost"
+      image_format: "must be a valid image format"
+      size_max: "should be less than 5MB"
+    micropost:
+      time: "Posted %{time} ago"
+      delete: "Delete"
+      you_sure?: "You sure?"
   password_resets:
     new:
       title: "Forgot password"
@@ -47,6 +59,17 @@ en:
         invalid_email_password: "Invalid email password combination"
         no_user: "No account found with the provided email address"
         not_activated: "Account not activated. Please check your email for the activation link"
+  shared:
+    error_messages:
+      error: "error"
+      the_form_contains: "The form contains"
+    micropost_form:
+      new: "Compose new micropost..."
+      max_size: "Maximum file size is 5MB. Please choose a smaller file."
+      post: "Post"
+    user_info:
+      view_profile: "View profile"
+      micropost: "micropost"
   static_pages:
     home:
       title: "Home"
@@ -55,6 +78,7 @@ en:
         main: "This is the home page for the %{rails_url} sample application."
         rails: "Ruby On Rails Tutorial"
         sign_up: "Sign up now!"
+        feed: "Feed"
     help:
       title: "Help"
       content:
@@ -100,3 +124,6 @@ en:
       content: "To reset your password click the link below:"
       expiration: "This link will expire in two hours."
       ignore: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
+  js:
+    micropost:
+      max_size_error: "Maximum file size is 5MB. Please choose a smaller file."
