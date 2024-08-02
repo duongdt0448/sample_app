@@ -1,0 +1,8 @@
+{
+    "en": {
+        "max_size": "Maximum file size is 5MB. Please choose a smaller file."
+    },
+    "vi": {
+       "max_size": "Kích thước file ảnh phải nhỏ hơn 5MB"
+    }
+}

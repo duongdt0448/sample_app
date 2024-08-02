@@ -112,6 +112,12 @@ en:
       title: "All users"
     user:
       you_sure?: "You sure?"
+    show_follow:
+      view_profile: "View profile"
+    follow: "Follow"
+    unfollow: "Unfollow"
+    following: "Following"
+    followers: "Followers"
   user_mailer:
     account_activation:
       greeting: "Hi"
@@ -124,6 +130,7 @@ en:
       content: "To reset your password click the link below:"
       expiration: "This link will expire in two hours."
       ignore: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
+    
   js:
     micropost:
       max_size_error: "Maximum file size is 5MB. Please choose a smaller file."
