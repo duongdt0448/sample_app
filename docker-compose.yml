@@ -1,0 +1,49 @@
+version: "3.7"
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USERNAME: ${MYSQL_USERNAME}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3307:3306"
+  redis:
+    image: "redis:4.0-alpine"
+    command: redis-server
+    volumes:
+      - "redis:/data"
+
+  website:
+    depends_on:
+      - "db"
+      - "redis"
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_PORT: ${DB_PORT}
+      DB_HOST: ${DB_HOST}
+      RAILS_ENV: ${RAILS_ENV}
+      RAILS_MAX_THREADS: ${RAILS_MAX_THREADS}
+    volumes:
+      - ".:/app"
+      - "./config/docker/database.yml:/app/config/database.yml"
+
+  sidekiq:
+    depends_on:
+      - "db"
+      - "redis"
+    build: .
+    command: sidekiq -C config/sidekiq.yml
+    volumes:
+      - ".:/app"
+    environment:
+      REDIS_URL: ${REDIS_URL}
+
+volumes:
+  redis:
+  db:
