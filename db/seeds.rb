@@ -6,7 +6,14 @@ User.create!(name: "Example User",
               activated: true,
               activated_at: Time.zone.now)
 
-30.times do |n|
+elasticsearch_service = ElasticSearchService.new
+
+index_name = 'microposts'
+elasticsearch_service.create_index(index_name, '{
+  "content": { "type": "text" }
+}')
+
+10.times do |n|
   name = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
@@ -20,9 +27,13 @@ end
 
 users = User.order(:created_at).take(6)
 
-15.times do |n|
-  content = Faker::Lorem.sentence(word_count: 5)
-  users.each { |user| user.microposts.create!(content: content)}
+10.times do |n|
+  users.each do |user|
+    content = Faker::Lorem.sentence(word_count: 5)
+    micropost = user.microposts.create!(content: content)
+
+    elasticsearch_service.create_document index_name, micropost, micropost.id
+  end
 end
 
 users = User.all

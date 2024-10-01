@@ -13,7 +13,11 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
 
-    resources :microposts, only: %i(create destroy)
+    resources :microposts, only: %i(create destroy) do
+      collection do
+        get :search_elastic
+      end
+    end
 
     resources :users do
       member do

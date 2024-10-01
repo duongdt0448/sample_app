@@ -79,6 +79,9 @@ en:
         rails: "Ruby On Rails Tutorial"
         sign_up: "Sign up now!"
         feed: "Feed"
+      elastic:
+        key_word: "Enter the name"
+        submit: "Submit"
     help:
       title: "Help"
       content:
