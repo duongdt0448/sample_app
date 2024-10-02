@@ -24,6 +24,17 @@ class MicropostsController < ApplicationController
     redirect_to request.referer || root_url
   end
 
+  def search_elastic
+    return if params[:query_elastic].blank?
+
+    body = {"query": {"match": {"content": params[:query_elastic]}}}
+    json_result = ElasticSearchService.new.search("microposts", body)
+    ids = json_result["hits"]["hits"].map{|hit| hit["_id"]}
+    @pagy, @feed_items = pagy(Micropost.where(id: ids), limit: Settings.page)
+    @micropost = current_user.microposts.build
+    render "static_pages/home", status: :unprocessable_entity
+  end
+
   private
   def micropost_params
     params.require(:micropost).permit Micropost::ALLOWED_PARAMS

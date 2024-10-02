@@ -95,6 +95,9 @@ vi:
         rails: "Ruby On Rails Tutorial"
         sign_up: "Đăng ký ngay!"
         feed: "Bảng tin"
+      elastic_search:
+        key_word: "Enter the name"
+        submit: "Tìm kiếm"
     help:
       title: "Trợ giúp"
       content:
